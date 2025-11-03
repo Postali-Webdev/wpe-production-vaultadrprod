@@ -1,0 +1,61 @@
+.gform_wrapper {
+    padding: 50px 50px 25px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+
+    @include respond(tab-port) {
+        padding:30px 30px 20px;
+    }
+
+    .gfield {
+        input {
+            padding:12px !important;
+        }
+    }
+
+    label {
+        color:$white;
+        text-transform: none !important;
+        font-size: 14px !important;
+        font-weight: normal;
+    }
+
+    .gfield_required {
+        color: $white !important;
+    }
+
+    p.gform_required_legend {
+        color:$white;
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        text-transform: none !important;
+        font-weight: bold !important;
+        border:none;
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+        transition:$trans;
+        white-space: break-spaces;
+        line-height: 130% !important;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        background: linear-gradient(to left, rgba(132,197,109,1) 0%, rgba(12,126,137,1) 100%);
+        color:$white;
+        border-radius: 10px;
+    }
+}
+
+// hubspot form styling 
+.hp-pre-footer .hbspt-form {
+    width: 100%;
+}
+
+#hsForm_f4c82044-e494-47c9-8c10-f0858c58e1eb {
+    label,
+    legend.hs-field-desc {
+        color: black !important;
+    }
+}

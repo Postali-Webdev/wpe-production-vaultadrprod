@@ -1,0 +1,190 @@
+{
+    "key": "group_6255eb28b9e78",
+    "title": "Interior - On Page Nav",
+    "fields": [
+        {
+            "key": "field_6255eb3399452",
+            "label": "Content Block",
+            "name": "content_block",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "You can repeat this block as many times as necessary depending on the content.\r\n<br>\r\n<strong>Block Title:<\/strong> This field will be used to build the on-page navigation. It should be similar to the H2 but can be shortened if necessary. If this section does not start with an H2 (at the top of a page, for example) it is ok to leave this field blank.<br>\r\n<strong>Main Content:<\/strong> This will start with the H2 and include all copy between the H2 and the start of the H3s (if they exist for this block).<br>\r\n<strong>Include Accordions:<\/strong> Check this box if there are H3s nested beneath the current H2.<br>\r\n<strong>Accordion Title:<\/strong> This will be the H3.<br>\r\n<strong>Accordion Content:<\/strong> This will be the body copy associated with the above H3.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6256d4b2d6297",
+                    "label": "Block Title",
+                    "name": "block_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_6255eb3399452"
+                },
+                {
+                    "key": "field_6255eb4599453",
+                    "label": "Main Content",
+                    "name": "main_content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_6255eb3399452"
+                },
+                {
+                    "key": "field_6256d52a91c00",
+                    "label": "Include Accordions?",
+                    "name": "include_accordions",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "yes": "Yes"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_6255eb3399452"
+                },
+                {
+                    "key": "field_6255eb5999454",
+                    "label": "Accordions",
+                    "name": "accordions",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "These should be used for all H3s.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6256d52a91c00",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_6255eb3399452",
+                    "sub_fields": [
+                        {
+                            "key": "field_6255eb7f99455",
+                            "label": "Accordion Title",
+                            "name": "accordion_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "parent_repeater": "field_6255eb5999454"
+                        },
+                        {
+                            "key": "field_6255eb8699456",
+                            "label": "Accordion Content",
+                            "name": "accordion_content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "parent_repeater": "field_6255eb5999454"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-interior-onpage.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1710363507
+}
