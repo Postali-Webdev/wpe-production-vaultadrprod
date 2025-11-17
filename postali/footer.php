@@ -9,6 +9,7 @@
 
 <footer>
 	<div id="footer-main">
+        <nav role="navigation">
 		<?php
 			$args = array(
 				'container'      => false,
@@ -16,6 +17,7 @@
 			);
 			wp_nav_menu( $args );
 		?>
+        </nav>
 	</div>
 
 	<div id="footer-bottom">

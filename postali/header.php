@@ -29,7 +29,7 @@ $phone = get_field('phone_number', 'options');
 			<div id="head-middle-right">
 			
 				<div class="head-menu desktop">
-					
+					<nav role="navigation">
 					<?php
 						$args = array(
 							'container'      => false,
@@ -37,7 +37,7 @@ $phone = get_field('phone_number', 'options');
 						);
 						wp_nav_menu( $args );
 					?>
-
+                    </nav>
 				</div>
 				
 			</div>
