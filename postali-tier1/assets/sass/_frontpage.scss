@@ -105,6 +105,11 @@
                     font-weight: bold;
                     color: #409D7C;
 
+                    @include respond(tab-land) {
+                        font-size: 55px;
+                        margin-bottom: 30px;
+                    }
+
                     span {
                         color: #0b2b48;
                     }
